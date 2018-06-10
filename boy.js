@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import Girl from './girl'
+import NavigationBar from './navigationBar'
 export default class Boy extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +12,7 @@ export default class Boy extends Component {
     render() {
         return (
             <View style={style.container}>
+                <NavigationBar title={"Boy"} statuesBar={{backgroundColor:"red"}}/>
                 <Text style={style.text}>i am boy</Text>
                 <Text style={style.text}
                     onPress={() => {

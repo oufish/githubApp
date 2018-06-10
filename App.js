@@ -10,9 +10,9 @@ import {
   StyleSheet,
   Text,
   Image,
-  Navigator,
   View
 } from 'react-native';
+import {Navigator} from 'react-native-deprecated-custom-components';
 // import TabNavigator from 'react-native-tab-navigator';
 import Boy from './boy'
 const instructions = Platform.select({
@@ -77,9 +77,9 @@ export default class App extends Component<Props> {
           initialRoute={{
             component:Boy
           }}
-          renderScene={(route,navigator)=>{
+          renderScene={(router,navigator)=>{
             let Component = router.component;
-            return <Comment navigator={navigator} {...route.params}/>
+            return <Component navigator={navigator} {...router.params}/>
           }}
         >
 

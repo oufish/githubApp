@@ -12,6 +12,12 @@ export default class Girl extends Component{
             <View style={style.container}>
                 <Text style={style.text}>i am girl</Text>
                 <Text style={style.text}>{this.props.world}</Text>
+                <Text style={style.text}
+                    onPress={()=>{
+                        this.props.onCallBack('巧克力')
+                        this.props.navigator.pop()
+                    }}
+                >给你巧克力</Text>
             </View>
         )
     }
